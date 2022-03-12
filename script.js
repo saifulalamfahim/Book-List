@@ -5,9 +5,11 @@ const year = document.querySelector(".number");
 const btn =  document.querySelector(".btn");
 
 
-btn.addEventListener("click", function(e){
-   e.preventDefault();
+btn.addEventListener("click", function(){
    console.log("ksj kore");
+ if (title.value == '' && aurthor.value == '' && year.value == '') {
+    alert("kisu lekh vai");
+ }else {
    const newRow = document.createElement("tr");
 
    const titleText = document.createElement("th");
@@ -24,6 +26,8 @@ btn.addEventListener("click", function(e){
    newRow.appendChild(yearText);
 
    bookList.appendChild(newRow);
+
+ }
 
 
 });
